@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 
 /*
 Prints the sizes and possible ranges of four integer data types. 
@@ -11,12 +12,12 @@ void print_int_ranges() {
   int uint_bytes = 4;
   int long_bytes = sizeof(long);
 
-  short short_min = -32768;
-  short short_max = 32767;
-  int int_min = -2147483648 ;
-  int int_max = 2147483647;
-  unsigned int uint_min = 0;
-  unsigned int uint_max = 4294967295;
+  short short_min = SHRT_MIN;
+  short short_max = SHRT_MAX;
+  int int_min = INT_MIN;
+  int int_max = INT_MAX;
+  unsigned int uint_min = UINT_MIN;
+  unsigned int uint_max = UINT_MAX;
   long long_min = 1L << long_bytes * 8 - 1;
   long long_max = ~long_min;
 
